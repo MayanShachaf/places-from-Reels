@@ -1,0 +1,13 @@
+1. start fastAPI:
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+2.to start the ngrok:
+ngrok http 8000 --domain=rapidly-uncommon-kiwi.ngrok-free.app
+
+//ngrok start fastapi
+
+3. start EXPO GO with tunnel:
+npx expo start --tunnel
+
+4.
+sudo mongod --dbpath ~/data/db

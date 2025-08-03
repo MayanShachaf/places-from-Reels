@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+.env
+venv/
+*.sqlite3
+
+# Node/React Native
+node_modules/
+.expo/
+.expo-shared/
+npm-debug.log
+yarn-error.log
+
+# VSCode settings
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
