@@ -16,10 +16,12 @@ export const addUser = async (userName: string, userEmail: string) => {
     }
 
 export const get_favorite_places_ids = async (userId: string) => {
-    const res = await axios.get(`${API_BASE_URL}/users/get_favorite_places`);
-    return res.data;
+    const res = await axios.get(`${API_BASE_URL}/users/get_favorite_places`, { params: { user_id: userId } });
+    return res.data; // Should be an array of place IDs
 }
 export const addFavoritePlace = async (placeId: string, userId: string) => {
-    const res = await axios.post(`${API_BASE_URL}/users/add_favorite_place`, { place_id: placeId, user_id: userId });
+    const res = await axios.post(
+        `${API_BASE_URL}/users/add_favorite_place?place_id=${placeId}&user_id=${userId}`
+    );
     return res.data;
 }

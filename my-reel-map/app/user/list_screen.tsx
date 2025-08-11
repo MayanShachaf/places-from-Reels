@@ -71,8 +71,10 @@ const ScreenName = () => {
 }
   const handleFavoriteToggle = (placeId: string) => {
   if (!favoritePlaceIds.includes(placeId)) {
-    addFavoritePlace(placeId, userId).then(() => {
-      setFavoritePlaceIds(prev => [...prev, placeId]);
+    setFavoritePlaceIds(prev => [...prev, placeId]); // Optimistically update UI
+    addFavoritePlace(placeId, userId).catch(() => {
+      // Revert if API fails
+      setFavoritePlaceIds(prev => prev.filter(id => id !== placeId));
     });
   }
 };
