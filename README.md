@@ -1,7 +1,6 @@
 # 📍 Places From Reels
 
-A fullstack app that helps users extract and save real-world places mentioned in Instagram Reels.
-
+Full-stack app that uses AI to extract real-world places mentioned in Instagram Reels and saves them to Google Maps
 ---
 
 ## 🧠 Project Summary
