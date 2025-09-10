@@ -27,7 +27,7 @@ Extract real‑world venues from Instagram Reels using AI and map them.  This fu
 
 ## Architecture Overview
 
-This monorepo contains a Python FastAPI backend and a React Native Expo app.  The typical flow is:
+This repo contains a Python FastAPI backend and a React Native Expo app.  The typical flow is:
 
 1. **User logs in** or registers via `POST /users/create_user`.  
 2. **User shares Reel text** through the mobile app.  The frontend calls `POST /places/add_place` with `{ "user_id": "...", "text": "<reel caption>" }`.  
@@ -87,7 +87,7 @@ places-from-Reels/
 - **Node.js 20+** and **npm** / **pnpm**
 - **Expo CLI** (install globally via `npm install -g expo-cli`)
 - **MongoDB** (local instance or Atlas cluster)
-- **API keys** for OpenAI and Google Maps (and optionally Google OAuth for login)
+- **API keys** for OpenAI and Google Maps
 
 ### Backend Setup
 
